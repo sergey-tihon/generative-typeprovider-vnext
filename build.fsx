@@ -7,6 +7,8 @@ open Fake.Testing.Expecto
 // version info
 let version = "0.1"  // or retrieve from CI server
 
+Target "All" DoNothing
+
 // Targets
 Target "Clean" (fun _ ->
     CleanDirs ["bin"]
@@ -55,6 +57,7 @@ Target "NuGet" (fun _ ->
   ==> "BuildTests"
   ==> "Test"
   ==> "NuGet"
+  ==> "All"
 
 // start build
 RunTargetOrDefault "NuGet"
