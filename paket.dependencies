@@ -1,0 +1,23 @@
+source https://www.nuget.org/api/v2
+
+nuget FSharp.Core ~> 4.0.0
+
+github fsprojects/FSharp.TypeProviders.StarterPack src/ProvidedTypes.fsi
+github fsprojects/FSharp.TypeProviders.StarterPack src/ProvidedTypes.fs
+github fsprojects/FSharp.TypeProviders.StarterPack src/AssemblyReader.fs
+github fsprojects/FSharp.TypeProviders.StarterPack src/AssemblyReaderReflection.fs
+github fsprojects/FSharp.TypeProviders.StarterPack src/ProvidedTypesContext.fs
+github fsprojects/FSharp.TypeProviders.StarterPack src/ProvidedTypesTesting.fs
+
+group Build
+	framework: net45
+	source https://nuget.org/api/v2
+
+	nuget FAKE
+
+group Test
+	framework: net45
+	source https://nuget.org/api/v2
+
+	nuget FSharp.Compiler.Service
+	nuget Expecto

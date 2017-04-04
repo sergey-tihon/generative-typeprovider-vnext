@@ -1,0 +1,19 @@
+﻿type file
+id MyTypeProvider
+owners
+    Sergey Tihon
+authors
+    Sergey Tihon
+copyright
+    Copyright 2017
+tags
+    F# fsharp typeprovider
+summary
+    Generative Type Provider vNext
+description
+    Generative Type Provider vNext
+files
+    ../../bin/MyTypeProvider/MyTypeProvider.* ==> lib
+references
+    MyTypeProvider.dll
+    MyTypeProvider.Runtime.dll
